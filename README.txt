@@ -1,7 +1,6 @@
 # Multi-View-Evolving-Fuzzy-Neural-Encoder-Framework
 
-The Python code for the research paper titled "Self-Organising Explainable Multi-View Representation Learning for Remote Sensing
-Scene Classification".
+The Python code for the research paper titled "Self-Organising Explainable Multi-View Representation Learning for Remote Sensing Scene Classification".
 
 This work is described in:
 ===============================================================================================================================
