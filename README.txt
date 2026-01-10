@@ -12,3 +12,6 @@ Please cite the paper above if this code helps.
 Programmed by Xiaowei Gu. For any queries about the code, please contact Dr. Xiaowei Gu: xiaowei.gu@surrey.ac.uk
 
 The datasets used in the main file are not provided in this repo. The links to the datasets used for experiments can be found in this paper.
+
+python == 3.9.19 
+tensorflow == 2.10.0
