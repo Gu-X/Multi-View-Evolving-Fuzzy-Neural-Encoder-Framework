@@ -17,7 +17,6 @@ from tensorflow.keras.preprocessing.image import img_to_array
 from glob import glob
 import numpy as np
 from Evolving_Fuzzy_Neural_Encoder import EFNE
-
 from Feature_Extraction_Pretrained_Model import feature_extraction_pretrained_model
 os.environ["CUDA_VISIBLE_DEVICES"]="0"
 
@@ -102,8 +101,10 @@ ytes=y[seq[range(L1,L)]].copy()
 # Train a SVM as the classifier
 lin_clf = svm.LinearSVC(max_iter=1000)
 lin_clf.fit(datatra,ytra)
+
 # Test the trained SVM
 dec = lin_clf.decision_function(datates)
 ye1=np.argmax(dec,axis=1)
 acc,bacc,f1,mcc=performancemeas(ytes,ye1)
+
 
