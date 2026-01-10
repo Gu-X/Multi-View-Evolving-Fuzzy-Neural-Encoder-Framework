@@ -86,9 +86,8 @@ def performancemeas(y1,ye0): # performance measure for multi-class classificatio
     mcc=sklearn.metrics.matthews_corrcoef(y1,ye0) # matthews correlation coefficient 
     return acc,bacc,f1,mcc
 
-from sklearn import svm
-
-# %% Train-test splitting
+# %% 
+# Train-test splitting
 L,W=data.shape
 splitratio=0.8
 seq=np.random.permutation(L)
@@ -98,6 +97,7 @@ ytra=y[seq[range(0,L1)]].reshape(-1,).copy()
 datates=data[seq[range(L1,L)],:].copy()
 ytes=y[seq[range(L1,L)]].copy()
 
+from sklearn import svm
 # Train a SVM as the classifier
 lin_clf = svm.LinearSVC(max_iter=1000)
 lin_clf.fit(datatra,ytra)
@@ -106,5 +106,6 @@ lin_clf.fit(datatra,ytra)
 dec = lin_clf.decision_function(datates)
 ye1=np.argmax(dec,axis=1)
 acc,bacc,f1,mcc=performancemeas(ytes,ye1)
+
 
 
